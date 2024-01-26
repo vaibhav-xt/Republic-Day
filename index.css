@@ -1,0 +1,351 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Handlee&family=Nosifer&family=Patrick+Hand+SC&family=Roboto&display=swap');
+
+:root {
+    --orange: #FF960F;
+    --white: #ffffff;
+    --green: #158214;
+    --blue: #2D1EA0;
+    --bg-color: #F4F4F4;
+    --background: linear-gradient(45deg, var(--orange), var(--green));
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: var(--background);
+    height: 100vh;
+    min-width: 1280px;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+
+.map {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+}
+
+.container {
+    background-color: var(--bg-color);
+    height: 800px;
+    width: 800px;
+    box-shadow: 0px 2px 30px black;
+    overflow: hidden;
+    position: relative;
+}
+
+.text {
+    width: 20px;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: var(--blue);
+}
+
+.Independence,
+.Day {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.label {
+    position: absolute;
+    left: 250px;
+    top: -150px;
+    width: 80px;
+    height: 500px;
+    background-color: var(--orange);
+    rotate: 60deg;
+}
+
+.label .label-left,
+.label .label-right {
+    width: 80px;
+    height: 80px;
+    rotate: 90deg;
+    margin-top: -30px;
+    background-color: var(--orange);
+    clip-path: polygon(25% 0%, 100% 0, 100% 100%, 25% 100%, 0 49%);
+}
+
+.label .label-right {
+    margin-top: 400px;
+    rotate: -90deg;
+}
+
+.label-shine {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    z-index: 9999;
+}
+
+.green .label-shine {
+    top: -30px;
+    height: 310px;
+}
+
+.white {
+    background-color: var(--white);
+    top: -10px;
+    left: 200px;
+    box-shadow: 0px -50px 200px rgba(0, 0, 0, 0.5);
+}
+
+.white .sub-label {
+    background: var(--white);
+}
+
+.green {
+    background-color: var(--green);
+    top: 180px;
+    left: 275px;
+    height: 250px;
+}
+
+.green .sub-label {
+    background-color: var(--green);
+}
+
+.green .label-right {
+    margin-top: 150px;
+}
+
+.chakra-container {
+    position: absolute;
+    background-color: var(--blue);
+    width: 230px;
+    height: 230px;
+    border-radius: 100%;
+    border: 2px solid var(--white);
+    top: 80px;
+    left: 160px;
+    z-index: 9;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5),
+        inset 2px 2px 5px black;
+}
+
+.chakra-shade {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.356), transparent);
+}
+
+.chakra-shade {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.356), transparent);
+}
+
+@keyframes infiniteRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.outer-circle {
+    width: 88%;
+    height: 88%;
+    border-radius: 100%;
+    background-color: var(--white);
+    display: grid;
+    place-items: center;
+    z-index: 999;
+    animation: infiniteRotate 15s infinite;
+}
+
+.stick {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 88%;
+    height: 40%;
+    background-color: var(--blue);
+    clip-path: polygon(48% 53%, 78% 48%, 100% 53%, 100% 53%, 79% 57%, 48% 53%, 26% 56%, 0 53%, 26% 48%, 48% 53%);
+}
+
+.stick-2 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(15deg);
+}
+
+.stick-3 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(30deg);
+}
+
+.stick-4 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.stick-5 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(60deg);
+}
+
+.stick-6 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(75deg);
+}
+
+.stick-7 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.stick-8 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(105deg);
+}
+
+.stick-9 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(120deg);
+}
+
+.stick-10 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(135deg);
+}
+
+.stick-11 {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(150deg);
+}
+
+.stick-12 {
+    top: 51%;
+    transform: translate(-50%, -50%) rotate(165deg);
+}
+
+.inner-circle {
+    width: 20%;
+    height: 20%;
+    background-color: var(--blue);
+    border-radius: 100%;
+}
+
+
+.text-container {
+    position: absolute;
+    top: 250px;
+    right: 50px;
+    text-align: right;
+    font-size: 35px;
+}
+
+.text-container h1 span {
+    color: var(--blue);
+    font-family: 'Handlee', cursive;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: .1;
+    z-index: -1;
+}
+
+.paragraph {
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Delicious Handrawn', cursive;
+}
+
+.float-text {
+    position: absolute;
+    top: 0%;
+    left: 20px;
+    font-family: 'Nosifer', cursive;
+    opacity: 1;
+    font-size: 40px;
+    z-index: 0;
+    color: var(--green);
+}
+
+#content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#thefile {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 100;
+}
+
+#canvas {
+    position: fixed;
+    z-index: -2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+audio {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+    width: calc(100% - 20px);
+}
+
+#file {
+    position: absolute;
+    left: 50px;
+    bottom: 20px;
+    cursor: pointer;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+    right: 50px;
+    gap: 10px;
+}
+
+.socials p {
+    font-family: 'Delicious Handrawn', cursive;
+    font-size: 20px;
+}
+
+.socials a {
+    color: var(--green);
+}
